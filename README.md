@@ -3,20 +3,26 @@
 *Note*: Feel free to open an issue if you have any questions. This isn't user-friendly due to my little time. 
 
 `aaider.py` is a script designed to automate the execution of multiple tasks using the Aider AI assistant. 
-It receives an output file of a bigger model using a specific format (`.example.xml`), parses it into Tasks and executes them asynchronously using Aider.
+It receives an output file of a bigger model using a specific format (`example.xml`), parses it into Tasks and executes them asynchronously using Aider.
 
 ## Example Usage
 
 0. Install requirements
 1. Configure DeepSeek API KEY, OpenRouter (if you want to use 'o1') like me
 2. Prepare your prompt: 
-   - Modify instructions in `.example.xml`
+   - Modify instructions in `example.xml`
    - Run `files-to-prompt --cxml YOUR_FILES_&_FOLDER | cop`
    - Paste in `<code-files>`
-3. `llm -m o1-mini < .example.xml > .out.xml`
+3. `llm -m o1-mini < example.xml > out.xml`
 4. `cd` to your current repo:
    - Make sure you commit your code for backup
-   - `python PATH_TO_AAIDER.py --input .out.xml`
+   - `python PATH_TO_AAIDER.py --input out.xml`
+
+## Notes
+- Be very specific in your `<purpose>`
+- You can add more `<instruction>` if you want
+- For me, o1 works very well with this setup.
+- Instead of `OpenRouter API`, you can copy and paste the full prompt with code to `o1` and copy back and apply to the code base with `aaider.py`.
 
 ## Options
 

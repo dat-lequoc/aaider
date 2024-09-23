@@ -1,0 +1,38 @@
+<purpose>
+
+  Check tutorial.py and integrate Tavily search engine into researcher.py. Update all related parts of the code.  
+
+</purpose>
+
+
+<instructions>
+  <instruction>
+    Provide code for each new or updated file in a single block. Only include the updated parts
+    of the code in your response.
+  </instruction>
+  <instruction>
+    Maintain the existing file names unless a change is necessary for better clarity or
+    structure. Respect the currently used libraries to avoid introducing unnecessary
+    dependencies.
+  </instruction>
+</instructions>
+
+
+<code-files>
+  files-to-prompt --cxml 
+  researcher.py 
+  tutorial.py 
+  <!-- text_source.py -->
+
+</code-files>
+
+<output_format>
+  <files_content>
+    <file>
+      <path>path/to/file</path>
+      <action>create | update | delete</action>
+      <description>Description of changes and purpose.</description>
+      <code>Updated parts of the code</code>
+    </file>
+  </files_content>
+</output_format>
